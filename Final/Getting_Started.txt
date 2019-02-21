@@ -1,0 +1,16 @@
+1) Navigate to the directory where the root file is saved
+
+2) Load your root file by starting a root session with :
+ root - l "filename.root" (without the quotation)
+
+3) If your root file has subdirectories inside which the relevant Tree exists, simple navigate to the directory. You can
+do this with TBrowser : 
+ TBrowser b;
+
+ This will open up a dialog similar to your file explorer. Simply navigate to the relevant subdirectory and note the Key for the Tree. 
+
+4) 'key' -> MakeClass("Myclass") (Type the key value without quotation)
+
+5) This will create a Myclass.C and a Myclass.h file.
+
+6) You are now ready to write macros. Open up your .C file.
