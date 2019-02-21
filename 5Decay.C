@@ -137,7 +137,7 @@ void Decay::Loop()
 
     //Defining the observables and parameters and initialising the values                                               
     RooRealVar x("x","mass",30.,500.);
-	RooRealVar mass("mass","Central value of CB",90.18,90.17,90.19);
+	  RooRealVar mass("mass","Central value of CB",90.18,90.17,90.19);
     RooRealVar sigma("sigma","Width of CB",20,0,100);
     RooRealVar alpha("alpha","Alpha",40.,-100,100.);
     RooRealVar n("n","Order",6,0.,10.);
@@ -157,10 +157,10 @@ void Decay::Loop()
     RooRealVar a9("a9","a9",-50,100);
 
     //Defining the bernstein polynomial pdf.
-	RooBernstein bg_bern("bg_bern","background",x, RooArgList(a1,a2,a3,a4,a5,a6,a7,a8,a9));   
+	  RooBernstein bg_bern("bg_bern","background",x, RooArgList(a1,a2,a3,a4,a5,a6,a7,a8,a9));   
 
 	//Defining the number of background and signal events. These will the weights with which your pdfs get added.
-	RooRealVar b("b", "Number of background events", 0, 5500);
+	  RooRealVar b("b", "Number of background events", 0, 5500);
     RooRealVar s("s", "Number of signal events", 0, 600); 
 
     //Finally this is the "fullmodel pdf"
@@ -188,10 +188,10 @@ void Decay::Loop()
     fullModel.plotOn(frame1,LineColor(kRed));
     fullModel.plotOn(frame2,LineColor(kRed));
     bg_bern.plotOn(frame2,LineColor(kGreen));
-	fullModel.paramOn(frame1,Layout(0.55,0.95,0.8));
+	  fullModel.paramOn(frame1,Layout(0.55,0.95,0.8));
 	
-	TCanvas* c = new TCanvas("canvas","canvas",1024,1024) ;
-	c -> Divide(2,2);
+	  TCanvas* c = new TCanvas("canvas","canvas",1024,1024) ;
+	  c -> Divide(2,2);
     c -> cd(1);
     frame1 -> Draw();
     c -> cd(2);
