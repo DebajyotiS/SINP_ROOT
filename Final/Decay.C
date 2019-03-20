@@ -2,7 +2,7 @@
 
 
 // How to Execute: 
-// 1) Ensure you have zdecay.h file in the same directory as this.
+// 1) Ensure you have Decay.h file in the same directory as this.
 // 2) Open a root session and type : .L Decay.C  
 // 3) You should get a message stating that zdecay is being processed and roofit has been loaded
 // 4) type : Decay t; (You may use any other var other than t)
